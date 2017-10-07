@@ -1,0 +1,634 @@
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  content: "";
+  height: 0;
+  display: block;
+  clear: both;
+  visibility: hidden;
+}
+
+
+body{
+   background-color: #f1f2f3;
+	/*background: url(../img/88.png) no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 625px;*/
+	
+}
+html{
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+}
+#header{
+	display: block;
+	height: 60px;
+	width: 1350px;
+	margin: 20px auto 0px;
+	vertical-align: middle;
+	white-space: nowrap;   /*文本处在一行,遇到br换行*/
+	/*border: 1px solid palegoldenrod;*/
+	position:fixed;
+	top: 0px;	
+	z-index: 100;
+	background: rgba(255,255,255,.8);
+	box-shadow: 0px 0px 3px #CCCCCC;
+}
+#header ul{
+	position: relative;
+	height: 80px;
+	width: 560px;
+	float: right;
+}
+#header ul:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+#header li {
+		position: relative;
+		z-index: 2;
+		display: block;
+		float: left;
+		width: 80px;
+		height: 60px;
+		line-height: 60px;
+		margin-right: 1.42857%;
+		white-space: nowrap;
+		background-position: 50%;
+		background-size:150px 60px;
+	}
+	
+.nav-list .rocket{
+	background: url(../img/rocket-large.png) no-repeat;
+	margin-left: 1.42857%;
+}
+.nav-list .wine{
+	background: url(../img/wine-large.png) no-repeat;
+}
+  
+	
+.nav-list .burger {
+		background: url(../img/burger-large.png)no-repeat;
+	}
+	
+.nav-list .comment {
+		background: url(../img/comment-large.png)no-repeat;
+	}
+	
+.nav-list .sport {
+		background: url(../img/sport-large.png)no-repeat;
+	}
+	
+.nav-list .earth {
+		background: url(../img//earth-large.png)no-repeat;
+	}
+.nav-list li:after {
+		content: "";
+		width:20px;
+		height: 60px;
+		position: absolute;
+		top: 0;
+		right: -23.5238%;
+		background: url(../img/menu-bg.png);
+	}
+	
+.nav-list .rocket:before {
+		content: "";
+		width: 10px;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: -12.5238%;
+		background: url(../img/menu-bg.png);
+		border-radius: 5px 0px 0px 5px;
+	}
+.nav-list .earth:after {
+		border-radius: 0px 5px 5px 0px;
+	}
+.current {
+		position: absolute;
+		top: -13px;
+		left: 12.5238%;
+		margin-left: -49px;
+		width: 80px;
+		height: 85px;
+		-webkit-transition: all 400ms cubic-bezier(.45, 1.92, .9, 1.54);  /*赛贝尔曲线*/
+		-moz-transition: all 400ms cubic-bezier(.45, 1.92, .9, 1.54);
+		-o-transition: all 400ms cubic-bezier(.45, 1.92, .9, 1.54);
+		-ms-transition: all 400ms cubic-bezier(.45, 1.92, .9, 1.54);
+		transition: all 400ms cubic-bezier(.16, 1.23, .87, 1.18);
+	}
+.current-back {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		background: #9a9b94;
+		border-radius: 5px;
+		border-bottom: 2px solid rgba(0, 0, 0, 0.09);
+		border-top: 2px solid rgba(255, 255, 255, 0.1);
+	}
+.top-arrow {
+		position: absolute;
+		overflow: hidden;
+		width: 100%;
+		height: 12px;
+		top: 13px;
+		left: 0;
+		z-index: 2;
+	}
+.top-arrow:before {
+		content: "";
+		position: absolute;
+		width: 80%;
+		height: 10px;
+		top: -10px;
+		left: 10%;
+		border-radius: 20%;
+		box-shadow: 0 0 10px black;
+	}
+.top-arrow:after {
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 0;
+		top: 0px;
+		border-top: 8px solid #9a9b94;
+		border-left: 6px solid transparent;
+		border-right: 6px solid transparent;
+		margin-left: -6px;       /*  绘制小三角形*/
+		left: 50%; 
+	}	
+.bottom-arrow {
+		position: absolute;
+		overflow: hidden;
+		width: 100%;
+		height: 12px;
+		bottom: 12px;
+		left: 0;
+		z-index: 2;
+	}
+	
+	.bottom-arrow:before {
+		content: "";
+		position: absolute;
+		width: 80%;
+		height: 10px;
+		bottom: -10px;
+		left: 10%;
+		border-radius: 20%;
+		box-shadow: 0 0 10px black;
+	}
+	
+	.bottom-arrow:after {
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 0;
+		bottom: 0;
+		border-bottom: 10px solid #9a9b94;
+		border-left: 8px solid transparent;
+		border-right: 8px solid transparent;
+		margin-left: -8px;
+		left: 50%;
+	}	
+	.rocket~ .current{   
+		left: 55px;
+	}
+	.wine:hover~.current {
+		left: 150px;
+	}
+	
+	.burger:hover~.current {
+		left: 235px;
+	}
+	
+	.comment:hover~.current {
+		left: 315px;
+	}
+	
+	.sport:hover~.current {
+		left: 410px;
+	}
+	
+	.earth:hover~.current {
+		left: 500px;
+	}
+#header .header-log{
+	margin-left: 50px;
+	float: left;
+	width: 60px;
+	height: 100%;
+	border: 1px solid #CCCCCC;
+	border-radius: 50%;
+	transition: .5s;
+	background: #FFFFFF;
+}
+#header .header-log img{
+	width: 60px;
+	height: 100%;
+	border-radius: 50%;
+}
+#header .header-log:hover{
+	background: #000000;
+	transform: rotate(720deg);
+}
+.center{
+	margin: 105px auto 0px;
+	width: 1210px;
+	/*border: 1px solid palegoldenrod;*/
+	z-index: 99;
+}
+.second{
+	padding: 40px 0px;
+	height: 500px;
+	width: 100%;
+
+}
+
+/*//轮播*/
+.second .second-l{
+	width: 710px;
+	height: 445px;
+	position: relative;
+	float: left;
+}
+.second .second-l li{
+	display: none;
+	position: absolute;
+	
+}
+.second .second-l li img{
+	width: 710px;
+	height: 445px;
+}
+ .tab {
+ 	position: absolute;
+ 	width: 41px;
+ 	height: 69px;
+ 	background: url("../img/icon-slides.png");
+ 	top: 200px;
+ 	cursor: pointer;
+ }
+ .second .second-l .prev {
+ 	left: 0px;
+ 	background-position: -84px;
+ }
+ 
+ .second .second-l .next {
+ 	right: -1px;
+ 	background-position: -125px;
+ }
+ 
+ .second .second-l .prev:hover {
+ 	background-position: 0px;
+ }
+ 
+ .second .second-l .next:hover {
+ 	background-position: -42px;
+ }
+ .second .second-r{
+    float: left;
+    width: 465px;
+ 	height: 445px;
+    margin-left:30px;
+   /* border: 1px solid palegoldenrod;*/
+    position: relative;
+ }
+  .second .second-r .second-r-t{
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 445px;
+ 	height: 290px;
+ 	background: #FFFFFF;
+    border: 1px solid #ccc;
+    padding:0px 10px;
+  }
+ .second .second-r .second-r-t p{
+ 	margin-top:20px ;
+ 	text-indent: 10px;
+ }
+.second .second-r .second-r-t .title{
+  color: #999;
+	font-family: "bradley hand itc";
+	font-size: 14px;
+	line-height: 30px;
+	border-bottom: 1px solid #CCCCCC;
+}
+.second .second-r .second-r-b{
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	width: 465px;
+	height: 135px;
+	border: 1px solid #CCCCCC;
+}
+
+
+.picture{
+	width: 1210px;
+	height: 300px;
+	border-top: 1px solid #ddd;
+}
+
+.picture .pic-list{
+	width: 100%;
+	height: 250px;
+	display:flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-content: center;
+}
+.picture .pic-list img{ 
+		width: 200px;
+	height: 200px;}
+.picture li{
+	position: relative;
+	background: #FFFFFF;
+	width: 200px;
+	height: 250px;
+}
+
+
+.picture li span{
+	display:inline-block;
+  margin-left: 80px;
+	text-align: center;
+	line-height: 50px;
+}
+.picture li i{
+	  width: 33px;
+    height: 30px;
+    background: url(../img/icon_sprite.png) no-repeat -702px -246px;
+	  position: absolute;
+	  left: 40px;
+	  bottom: 7px;
+}
+/*共有属性*/
+.picture img{
+
+}
+.content img{
+		width: 200px;
+	height: 200px;
+}
+ .title{
+	font-size: 16px;
+	color: #999;
+	font-family: "bradley hand itc";
+	line-height: 40px;
+	text-indent: 20px;
+}
+.content li:hover{
+	margin-top: -10px;
+	box-shadow: 0px 0px 10px #999999;
+}
+.picture li:hover{
+	margin-top: -10px;
+	box-shadow: 0px 0px 10px #999999;
+}
+.content .mo span{
+	display: block;
+	position: relative;
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+}
+.content .mo span i.see{
+    position: absolute;
+    top: 5px;
+    left: 30px;
+	  width: 33px;
+    height: 30px;
+    background: url(../img/icon_sprite.png) no-repeat -740px -241px;
+    
+}
+/*共有属性*/
+.content{
+	margin-top: 20px;
+	background: #FFFFFF;
+	width: 1210px;
+	height: 600px;
+/*	border: 1px solid #DDDDDD;*/
+	position: relative;
+	overflow: hidden;
+}
+.content .content-l{
+	width: 250px;
+	height: 550px;
+/*	border: 1px solid #DDDDDD;*/
+box-shadow: 0px 0px 5px #DDDDDD;
+}
+.content .content-l .mo{
+	margin: 20px;
+  width: 200px;
+  height: 250px;
+  background: #FFFFFF;
+/*  border: 1px solid #CCCCCC;*/
+  overflow: hidden;
+  position: relative;
+}
+.content .content-l .mo img{
+	width: 250px;
+	height: 200px;
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   transition: left .5s;
+}
+.content .content-l .mo img:hover{
+	left: -10px;
+}
+.content .content-l .mo span{
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+}
+.content .content-r{
+	width: 950px;
+	height: 550px;
+	/*border: 2px solid #DDDDDD;*/
+	box-shadow: 0px 0px 5px #DDDDDD;
+  position: absolute;
+  top: 60px;
+  right: 0px;
+}
+.content .content-r li{
+  width: 200px;
+  height: 250px;
+  background: #CCCCCC;
+  float: left;
+  margin: 17px 55px;
+  position: relative;
+  overflow: hidden;
+}
+.content .content-r .hidden{
+	width: 200px;
+	height: 50px;
+	background: #FFFFFF;
+  text-align: center;
+  line-height: 50px;
+  font-size: 16px;
+  transform: translateY(0px);
+	transition: .3s ease-in-out;
+}
+.content .content-r .mo:hover .hidden{
+	transform:translate(0px,-40px);
+}
+.content .content-r li.demo{
+	
+	background: url(../img/d.jpg);
+}
+.content .content-r li.demo .bg{
+      	position: absolute;
+     	  top: 0px;
+     	  left: 200px;
+				width: 200px;
+				height: 200px;
+				background:rgba(0,0,0,.7)
+}
+.content .content-r li.demo .bg h3{
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	color: #CCCCCC;
+	margin-bottom: 20px;
+}
+.demo:hover > img{
+  -webkit-transform: translateX(-200px);
+  transform: translateX(-200px);
+}
+
+ .content .content-r .top{
+				position: absolute;
+				right: 0px;
+				top: 0px;
+				width: 0px;
+				height: 3px;
+				background: #000000;
+			}
+ .right{
+				position: absolute;
+				bottom:0px;
+				right: 0px;
+				width: 3px;
+				height: 0px;
+				background: #000000;
+			}
+.bottom{
+				position: absolute;
+				left: 0px;
+				bottom: 0px;
+				width: 0px;
+				height: 3px;
+				background: #000000;
+			}
+ .left{
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 3px;
+				height: 0px;
+				background: #000000;
+			}
+			
+			
+/*瀑布流效果*/
+     .waterfull{
+     	position: relative;
+     	height: 1330px;
+	    margin: 20px auto;
+      }
+ 
+    .box {
+				padding: 10px 26px;
+				float: left;
+				/*border: 1px solid #000000;*/
+			}
+		 .waterfull	.pic {
+				padding: 10px;
+			  border-radius: 5px;
+				box-shadow: 0 0 5px #CCCCCC;	
+			}
+		 .waterfull	.pic:hover{
+				margin-top: -10px;
+				box-shadow: 0px 0px 10px #CCCCCC;
+			}
+			.pic img{
+				width: 224px;
+				height: auto;
+			}
+      .waterfall-info{
+      	padding: 0px 10px;
+				width: 222px;
+				height: 60px;
+				border:solid #CCCCCC;
+				border-width: 0px 1px 1px;
+				margin-top: -5px;
+		
+			}
+			
+			.waterfall-info .title {
+			  text-indent: 10px;
+				line-height: 20px;
+				color: #000;
+				font-size: 14px;
+				margin-top: 5px;
+			}
+			
+			.waterfall-info .icon {
+				text-indent: 10px;
+				color: #bbb;
+			}
+			
+			.waterfall-info .icon span {
+				display: inline-block;
+				padding-left: 16px;
+				background: url("../img/1.png") no-repeat;
+			}
+			
+			.waterfall-info .icon span.icon-star {
+				margin-right: 10px;
+				background-position: -5px -52px;
+			}
+			
+			.waterfall-info .icon span.icon-like {
+				background-position: -90px -52px;
+			}
+			
+.footer{
+	width: 1210px;
+	height: 200px;
+	margin-top: 10px;
+	/*border: 3px solid #000000;*/
+	position: relative;
+	background: #DDDDDD;
+	box-shadow: 0px 0px 5px #DDDDDD;
+}
+.footer img{
+	width: 100px;
+	height: 100px;
+	margin: 20px;
+	float: left;
+}
+.footer .footer-list{
+	float: left;
+	margin: 30px 20px;
+	width: 800px;
+}
+.footer .footer-list li{
+	float: left;
+	line-height: 20px;
+	width: 80px;
+}
+.footer .fopter-copyright{
+	position: absolute;
+	bottom: 10px;
+	left: 400px;
+}
